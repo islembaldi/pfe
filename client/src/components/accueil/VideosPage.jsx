@@ -1,47 +1,39 @@
 import React from "react";
+import "./style.css";
 
 function VideosPage() {
   return (
     <div>
       <h2>Vidéos</h2>
       <div className="video-container">
-        {/* Insérez ici vos vidéos */}
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/video1"
-          title="Video 1"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/video2"
-          title="Video 2"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/video3"
-          title="Video 3"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/video4"
-          title="Video 4"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+        <div className="video-wrapper">
+          <h3>Titre de la vidéo 1</h3>
+          <video controls>
+            <source src="viedo1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div className="video-wrapper">
+          <h3>Titre de la vidéo 2</h3>
+          <video controls>
+            <source src="video2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div className="video-wrapper">
+          <h3>Titre de la vidéo 3</h3>
+          <video controls>
+            <source src="video3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div className="video-wrapper">
+          <h3>Titre de la vidéo 4</h3>
+          <video controls>
+            <source src="video4.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
   );

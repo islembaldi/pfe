@@ -5,6 +5,8 @@ import Login from "./components/accueil/login/Login";
 import Inscription from "./components/accueil/inscription/Inscription";
 import contact from "./components/accueil/contact/contact";
 import CustomNavbar from "./components/accueil/CustomNavbar/CustomNavbar";
+
+import VideosPage from "./components/accueil/VideosPage";
 function App() {
   return (
     <Router>
@@ -15,6 +17,8 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/inscription" component={Inscription} />
           <Route path="/contact" component={contact} />
+          <Route exact path="/" component={Accueil} />
+          <Route path="/videos" component={VideosPage} />
         </Switch>
       </div>
     </Router>

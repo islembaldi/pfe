@@ -5,8 +5,9 @@ import {
   faComment,
   faArrowRight,
   faSmile,
-} from "@fortawesome/free-solid-svg-icons"; // Importer les icônes nécessaires
+} from "@fortawesome/free-solid-svg-icons";
 import { handleScroll } from "./scrollVisibility.js";
+import { Link } from "react-router-dom";
 
 function Accueil() {
   useEffect(() => {
@@ -26,11 +27,10 @@ function Accueil() {
         </p>
       </div>
 
-      <button className="watch-button">
-        {/* Bouton "Watch" */}
+      <Link to="/videos" className="watch-button">
         <span className="text">Watch more videos</span>{" "}
         <FontAwesomeIcon icon={faArrowRight} className="icon" />
-      </button>
+      </Link>
 
       <div className="content" id="content">
         {/* Contenu principal */}
