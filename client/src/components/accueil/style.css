@@ -1,0 +1,243 @@
+.animated-background {
+  background-image: url("../../Assets/accueil.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(232, 223, 223);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: fadeBackground 4s ease-in-out infinite alternate;
+}
+
+@keyframes fadeBackground {
+  0% {
+    opacity: 0.8; /* Opacité initiale */
+  }
+  100% {
+    opacity: 1; /* Opacité finale */
+  }
+}
+
+.animated-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease; /* Transition douce pour l'effet de zoom */
+  pointer-events: none;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(255, 255, 255) !important; /* Couleur du texte en noir */
+}
+/*commentaire*/
+.comment-container {
+  position: fixed;
+  top: 40%;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 10px;
+  height: 300px;
+  animation: titleMovement 2s infinite ease-in-out alternate;
+}
+@keyframes titleMovement {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Style pour le bouton "Envoyer" au survol */
+.send-button:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
+}
+
+.comment-icon {
+  color: white; /* Couleur de l'icône */
+  top: -20px;
+}
+
+.frame {
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+  background-color: #f9f9f9;
+}
+/* le cadre de container bienvenu */
+.text-container {
+  position: fixed;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 20px;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* acceuil le champs de texte */
+.animated-background {
+  position: relative;
+  overflow: hidden;
+}
+.custom-navbar .nav-link {
+  margin-right: 20px;
+}
+.nav-link:hover {
+  background-color: rgba(85, 234, 194, 0.7);
+  border-radius: 10%;
+}
+/*icons links dans le navbar*/
+.icon-spacing {
+  margin-right: 5px;
+}
+
+/* Ajoutez ces styles CSS à votre fichier CSS existant */
+
+/* Style pour les éléments de la liste déroulante */
+.dropdown-menu .dropdown-item {
+  color: rgb(0, 0, 0); /* Texte en blanc */
+}
+
+/* Style pour garder le texte "Services" en noir */
+.navbar-nav .nav-link.dropdown-toggle {
+  color: rgb(255, 255, 255) !important;
+}
+/* Styles pour afficher les éléments de la liste déroulante au survol */
+.navbar-nav .nav-item:hover .nav-link + .dropdown-menu {
+  display: block;
+}
+
+/* le texte de page d'accueil*/
+.content {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100vh - 100px);
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 20px;
+  color: rgb(253, 244, 244);
+  box-shadow: 0 4px 8px rgba(45, 44, 44, 0.3);
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.para {
+  color: rgb(252, 80, 0);
+  font-size: 30px;
+  text-align: center;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/*les 3 imgaes */
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  margin-right: 20px;
+  position: relative;
+}
+
+img {
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*les 3 mots exeman test cours*/
+.word-spacing {
+  display: flex;
+  justify-content: center;
+}
+
+/*footer */
+.footer-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+/*button watch */
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+
+  left: 20px;
+}
+/*button watch more videos */
+
+.watch-button {
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(85, 234, 194, 0.7);
+  color: rgb(255, 255, 255);
+  border: 2px solid rgba(85, 234, 194, 0.7);
+  padding: 10px 30px;
+  border-radius: 5px;
+  width: 20%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.icon {
+  transition: transform 0.3s ease; /* Ajoute une transition pour l'animation */
+}
+
+.watch-button:hover .icon {
+  transform: rotate(
+    90deg
+  ); /* Applique une rotation de 90 degrés lors du survol */
+}
+.watch-button:hover {
+  background-color: rgb(224, 17, 17);
+  color: white;
+}
+.watch-button span {
+  font-size: 20px;
+}
